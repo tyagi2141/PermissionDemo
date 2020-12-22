@@ -10,9 +10,14 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener
 
 
 class FirstViewModel(
-) : ViewModel() {
+) : BaseViewModel() {
 
 
+    fun showprogress(){
+        loadingDataLiveData.postValue(true)
+        noInternetLiveData.postValue(true)
+
+    }
 
     fun permissionListenersCameraStorage(
         activityContext: Context,
